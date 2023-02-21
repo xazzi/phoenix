@@ -1,0 +1,52 @@
+<asset-wrapper id="0">
+   <meta-data id="1" os="Windows Server 2012 R2 6.3" date="Tue Feb 21 14:09:44 MST 2023">
+      <version id="2" major="8" minor="0" patch="2" type="Release" secondary="1" changeset="3d2ae32976c11d8521d00d86096864e09ea0c013" date="2022-04-08T13:06:20.1877804" revision="0"/>
+   </meta-data>
+   <mark class="com.tilia.core.marks.TextMarkAsset" id="3" unique-id="a2473a09-f330-439c-8451-655cfbd1eedd" name="TensionStand-Label" created-by="Phoenix" created-on="2023-02-20T16:18:06.742-07:00" modified-by="Phoenix" modified-on="2023-02-21T14:00:52.987-07:00" version="e3dc1ce5-faf1-4229-9edb-0fcba24f0b9e" edit="true" move="true" delete="true" hidden="false" rules-are-global="false" built-in-path="false" markPage="1" anchor="product" overprint="false" overprint-mode="Standard" underprint="None" dynamic-custom-mark="false" dynamic-keyword-mapping="false" ignore-technical-inks="true" ignore-varnish-inks="true" pdf-box="TrimBox" clip-option="None" clip-left="0pt" clip-right="0pt" clip-top="0pt" clip-bottom="0pt" x-scale="1.0" y-scale="1.0" layer-name="" double-sided="None">
+      <properties id="4">
+         <map id="5"/>
+      </properties>
+      <rules id="6">
+         <rule id="7" unique-id="5f443c85-eeb1-40fe-82e7-b1d89cbd2f74" rotation="0.0" rotation-type="in-place">
+            <x id="8" type="XValue" xpoint="Center" ypoint="Bottom" formula="anchor.center+0&quot;"/>
+            <y id="9" type="YValue" xpoint="Left" ypoint="Bottom" formula="anchor.y+0.125&quot;"/>
+            <xscale id="10">1.0</xscale>
+            <yscale id="11">1.0</yscale>
+         </rule>
+      </rules>
+      <underprint-color id="12" type="Composite">
+         <components class="java.util.ArrayList" id="13">
+            <component id="14" type="Ink" placeholder-index="0">
+               <ink id="15" refid="b0842956-d58d-4ef0-a521-1d78dfec9a80" type="com.tilia.core.color.TInk"/>
+               <tint id="16">1.0</tint>
+            </component>
+         </components>
+      </underprint-color>
+      <underprint-margins id="17" type="Outside" linked="false">
+         <left id="18">0pt</left>
+         <top id="19">0pt</top>
+         <right id="20">0pt</right>
+         <bottom id="21">0pt</bottom>
+      </underprint-margins>
+      <ink-mappings class="java.util.LinkedList" id="22"/>
+      <keyword-mappings class="java.util.LinkedList" id="23"/>
+      <place-below id="24">false</place-below>
+      <text id="25">&lt;html&gt;&lt;body style=&quot; &quot;&gt;&lt;p style=&quot; font-family:&apos;Arimo&apos;; font-size:18.0pt; font-weight:-2147483648;  color:#000000;&quot;&gt;&amp;lt;product.custom.custom-label&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</text>
+      <style>
+         <integer id="26">-2147483648</integer>
+         <string id="27">Regular</string>
+      </style>
+      <line-heights class="java.util.LinkedList" id="28"/>
+      <color>
+         <string id="29">000000</string>
+         <markColor id="30" type="Composite">
+            <components class="java.util.ArrayList" id="31">
+               <component id="32" type="Ink" placeholder-index="0">
+                  <ink id="33" refid="de7e01c4-794e-45e7-99a7-b3dceaf0ca3c" type="com.tilia.core.color.TInk"/>
+                  <tint id="34">1.0</tint>
+               </component>
+            </components>
+         </markColor>
+      </color>
+   </mark>
+</asset-wrapper>
