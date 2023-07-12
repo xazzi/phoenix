@@ -102,10 +102,10 @@ function run(context){
 
     // Draw the shape
     var barRect = new Rect(
-        layout.globalRect.left + (2.5*72),
-        layout.globalRect.height - (.375*72),
-        2*72,
-        .25*72
+        layout.globalRect.left + (.125*72),
+        layout.globalRect.height - (.625*72),
+        .5*72,
+        .5*72
     );
 
     if(true){
