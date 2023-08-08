@@ -80,8 +80,6 @@ function run(context){
             color = "Black";
             build = [0,0,0,100]
     }
-    
-    var layout = context.root;
 
     // Create new Painter to draw with and clear the pen so there will be no stroke.
     var painter = new Painter(context.data);
@@ -102,15 +100,23 @@ function run(context){
 
     // Draw the shape
     var barRect = new Rect(
-        layout.globalRect.left + (.125*72),
-        layout.globalRect.height - (.625*72),
+        context.root.globalRect.left + (.125*72),
+        context.root.globalRect.height - (.625*72),
         .5*72,
-        .5*72
+        .25*72
     );
 
-    if(true){
-        painter.draw(barRect);
-    }
+    painter.draw(barRect);
+
+    // Draw the shape
+    var barRect = new Rect(
+        context.root.globalRect.left + context.root.globalRect.width - (.625*72),
+        context.root.globalRect.height - (.625*72),
+        .5*72,
+        .25*72
+    );
+
+    painter.draw(barRect);
 
     return true;
 }
