@@ -28,12 +28,12 @@ function run(context){
 		}
 
 		// If the script does not need to be ran, continue through the product.
-		if(scripts.name != "SewnHem"){
+        if(!scripts.name.contains("SewnHem")){
 			continue;
 		}
 
-        // Pull necessary parameters for the script.
-		var parameters = {
+        // Pull these variables from other places in the CSV
+		var specs = {
 			width: context.jobs.productProperty(
 				context.job.id,
 				product.name,
@@ -74,7 +74,7 @@ function run(context){
             painter.pen = pen;
 
         // For now, skip the dashed line if it's not 100% scale. Adjust this later to account for the scale in the hem.
-        if(parameters.scale.width != 1 || parameters.scale.height != 1){
+        if(specs.scale.width != 1 || specs.scale.height != 1){
             continue;
         }
 

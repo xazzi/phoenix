@@ -1,3 +1,8 @@
+// This script is built requiring multiple mechanisms enabling it:
+// - Enabled in the CSV.
+// - Enabled in this code below.
+// - The mark must be assigned to a product or press as well.
+
 var items = [];
 var id = null;
 
@@ -9,6 +14,21 @@ function run(context){
     for (var i=0;i<items.length;i++){
         var product = items[i];
 
+        // Pull the script information.
+		var scripts = {
+			name: context.jobs.productProperty(
+				context.job.id,
+				product.name,
+				"Script Name"
+			)
+		}
+
+        // If the script does not need to be ran, continue through the product.
+        if(!scripts.name.contains("ColorOfTheDay")){
+            continue;
+        }
+
+        // Pull these variables from other places in the CSV
 		var parameters = {
             scale: {
                 width: context.jobs.productProperty(
@@ -105,7 +125,6 @@ function run(context){
         .5*72,
         .25*72
     );
-
     painter.draw(barRect);
 
     // Draw the shape
@@ -115,7 +134,6 @@ function run(context){
         .5*72,
         .25*72
     );
-
     painter.draw(barRect);
 
     return true;

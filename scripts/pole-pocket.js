@@ -33,7 +33,7 @@ function run(context){
 		}
 
 		// If the script does not need to be ran, continue through the product.
-		if(scripts.name != "PolePocket"){
+        if(!scripts.name.contains("PolePocket")){
 			continue;
 		}
 
@@ -42,7 +42,7 @@ function run(context){
             continue;
         }
 
-        // Pull necessary specs for the script.
+        // Pull these variables from other places in the CSV
 		var specs = {
 			width: context.jobs.productProperty(
 				context.job.id,

@@ -1,7 +1,15 @@
+// This script is built requiring multiple mechanisms enabling it:
+// - Enabled in the CSV.
+// - Enabled in this code below.
+// - The mark must be assigned to a product or press as well.
+
 var items = [];
+var enable = {
+    top: false,
+    bottom: false
+}
 
 function run(context){
-
     // find all products on the layout, this adds them to the "items" array we can use later
     findProducts(context, context.root);
 
@@ -9,26 +17,33 @@ function run(context){
     for (var i=0;i<items.length;i++){
         var product = items[i];
 
+        // Pull the script information.
 		var scripts = {
-            enabled: context.jobs.productProperty(
-                context.job.id,
-                product.name,
-                "Enable Scripts"
-            ) == "true",
-            name: context.jobs.productProperty(
-                context.job.id,
-                product.name,
-                "Script Name"
-            ),
+			name: context.jobs.productProperty(
+				context.job.id,
+				product.name,
+				"Script Name"
+			),
+            dynamic: context.jobs.productProperty(
+				context.job.id,
+				product.name,
+				"Script Dynamic"
+			).split(',')
+		}
+
+        // If the script does not need to be ran, continue through the product.
+        if(!scripts.name.contains("DS-Indicators")){
+            continue;
         }
-    }
 
-    if(!scripts.enabled){
-        return false;
-    }
-
-    if(!scripts.name.contains("DS-Indicators")){
-        return false;
+        for(var k in scripts.dynamic){
+            if(scripts.dynamic[k] == "DSI-T:true"){
+                enable.top = true
+            }
+            if(scripts.dynamic[k] == "DSI-B:true"){
+                enable.bottom = true
+            }
+        }
     }
 
     // Create new Painter to draw with and clear the pen so there will be no stroke.
@@ -48,46 +63,45 @@ function run(context){
         painter.pen = pen;
         painter.setBrush(penColor);
 
-    // Draw the shape
-    var topLeft = new Rect(
-        context.root.globalRect.left + (.125*72),
-        context.root.globalRect.height - (.375*72),
-        .5*72,
-        .25*72
-    );
+    if(enable.top){
+        // Draw the shape
+        var topLeft = new Rect(
+            context.root.globalRect.left + (.125*72),
+            context.root.globalRect.height - (.375*72),
+            .5*72,
+            .25*72
+        );
+        painter.draw(topLeft);
 
-    painter.draw(topLeft);
+        // Draw the shape
+        var topRight = new Rect(
+            context.root.globalRect.left + context.root.globalRect.width - (.625*72),
+            context.root.globalRect.height - (.375*72),
+            .5*72,
+            .25*72
+        );
+        painter.draw(topRight);
+    }
 
-    // Draw the shape
-    var topRight = new Rect(
-        context.root.globalRect.left + context.root.globalRect.width - (.625*72),
-        context.root.globalRect.height - (.375*72),
-        .5*72,
-        .25*72
-    );
+    if(enable.bottom){
+        // Draw the shape
+        var bottomLeft = new Rect(
+            context.root.globalRect.left + (.125*72),
+            context.root.globalRect.top - context.root.globalRect.height + (.125*72),
+            .5*72,
+            .25*72
+        );
+        painter.draw(bottomLeft);
 
-    painter.draw(topRight);
-
-    // Draw the shape
-    var bottomLeft = new Rect(
-        context.root.globalRect.left + (.125*72),
-        context.root.globalRect.top - context.root.globalRect.height + (.125*72),
-        .5*72,
-        .25*72
-    );
-
-    painter.draw(bottomLeft);
-
-    // Draw the shape
-    var bottomRight = new Rect(
-        context.root.globalRect.left + context.root.globalRect.width - (.625*72),
-        context.root.globalRect.top - context.root.globalRect.height + (.125*72),
-        .5*72,
-        .25*72
-    );
-
-    painter.draw(bottomRight);
-
+        // Draw the shape
+        var bottomRight = new Rect(
+            context.root.globalRect.left + context.root.globalRect.width - (.625*72),
+            context.root.globalRect.top - context.root.globalRect.height + (.125*72),
+            .5*72,
+            .25*72
+        );
+        painter.draw(bottomRight);
+    }
     return true;
 }
 

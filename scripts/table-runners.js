@@ -23,12 +23,12 @@ function run(context){
 		}
 
 		// If the script does not need to be ran, continue through the product.
-		if(scripts.name != "TableRunner"){
+		if(!scripts.name.contains("TableRunner")){
 			continue;
 		}
 
-		// Pull necessary parameters for the script.
-		var parameters = {
+		// Pull these variables from other places in the CSV
+		var specs = {
 			width: context.jobs.productProperty(
 				context.job.id,
 				product.name,
@@ -60,17 +60,17 @@ function run(context){
 		// Draw the shape
 		if(product.rotation == 90){
 			barRect = new Rect(
-				product.position.x-product.globalRect.width+((product.globalRect.width-(parameters.height*72))/2)-(.75*72),
-				product.position.y+((product.globalRect.height-(parameters.width*72))/2)-(.75*72),
-				(parameters.height*72)+(1.5*72),
-				(parameters.width*72)+(1.5*72)
+				product.position.x-product.globalRect.width+((product.globalRect.width-(specs.height*72))/2)-(.75*72),
+				product.position.y+((product.globalRect.height-(specs.width*72))/2)-(.75*72),
+				(specs.height*72)+(1.5*72),
+				(specs.width*72)+(1.5*72)
 			);
 		}else{
 			barRect = new Rect(
-				product.position.x+((product.globalRect.width-(parameters.width*72))/2)-(.75*72),
-				product.position.y+((product.globalRect.height-(parameters.height*72))/2)-(.75*72),
-				(parameters.width*72)+(1.5*72),
-				(parameters.height*72)+(1.5*72)
+				product.position.x+((product.globalRect.width-(specs.width*72))/2)-(.75*72),
+				product.position.y+((product.globalRect.height-(specs.height*72))/2)-(.75*72),
+				(specs.width*72)+(1.5*72),
+				(specs.height*72)+(1.5*72)
 			);
 		}
 
