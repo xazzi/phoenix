@@ -1,3 +1,8 @@
+// This script is built requiring multiple mechanisms enabling it:
+// - Enabled in the CSV.
+// - Enabled in this code below.
+// - The mark must be assigned to a product or press as well.
+
 var items = [];
 var id = null;
 
@@ -9,6 +14,21 @@ function run(context){
     for (var i=0;i<items.length;i++){
         var product = items[i];
 
+        // Pull the script information.
+		var scripts = {
+			name: context.jobs.productProperty(
+				context.job.id,
+				product.name,
+				"Script Name"
+			)
+		}
+
+        // If the script does not need to be ran, continue through the product.
+        if(!scripts.name.contains("ColorOfTheDay")){
+            continue;
+        }
+
+        // Pull these variables from other places in the CSV
 		var parameters = {
             scale: {
                 width: context.jobs.productProperty(
@@ -80,8 +100,6 @@ function run(context){
             color = "Black";
             build = [0,0,0,100]
     }
-    
-    var layout = context.root;
 
     // Create new Painter to draw with and clear the pen so there will be no stroke.
     var painter = new Painter(context.data);
@@ -102,15 +120,21 @@ function run(context){
 
     // Draw the shape
     var barRect = new Rect(
-        layout.globalRect.left + (.125*72),
-        layout.globalRect.height - (.625*72),
+        context.root.globalRect.left + (.125*72),
+        context.root.globalRect.height - (.625*72),
         .5*72,
-        .5*72
+        .25*72
     );
+    painter.draw(barRect);
 
-    if(true){
-        painter.draw(barRect);
-    }
+    // Draw the shape
+    var barRect = new Rect(
+        context.root.globalRect.left + context.root.globalRect.width - (.625*72),
+        context.root.globalRect.height - (.625*72),
+        .5*72,
+        .25*72
+    );
+    painter.draw(barRect);
 
     return true;
 }
