@@ -1,0 +1,108 @@
+<asset-wrapper id="0">
+   <meta-data id="1" os="Windows Server 2019 10.0" date="Tue Sep 05 15:57:38 UTC 2023">
+      <version id="2" major="8" minor="1" patch="3" type="Release" secondary="1" changeset="6a687b38ccc596d2780d366d1c7e33ad5baa7c9d" date="2023-02-16T23:44:46.4251205" revision="0"/>
+   </meta-data>
+   <thing class="com.tilia.iot.model.process.printing.RollFedWideFormatPress" id="3" unique-id="b58a32c5-ff17-450b-bcbd-de12f0813421" name="5r (Scaled)" created-by="Phoenix" created-on="2023-09-05T15:06:56.220Z" modified-by="Phoenix" modified-on="2023-09-05T15:09:35.178Z" version="a5c32f87-8a1a-440f-96d4-eadfff066a0e" edit="true" move="true" delete="true" hidden="false" allow-pass-through="false" manufacturer="" single-pass-double-sided="false" double-sided-speed-reduction="0%">
+      <properties id="4">
+         <map id="5"/>
+      </properties>
+      <connections id="6"/>
+      <costing class="com.tilia.iot.model.process.printing.RollFedWideFormatPress$RfwfpCosting" id="7" currency="USD" running-waste="0.0">
+         <rate id="8" value="0.0" units="Hours"/>
+         <setup class="com.tilia.iot.model.process.SetupLayouts" id="9" layouts="0">
+            <time id="10" units="Hours" value="0.0"/>
+         </setup>
+      </costing>
+      <capabilities class="com.tilia.iot.model.process.printing.PressCapabilities" id="11" limit="false" limit-logic="Exclusively" sheet-handling="None">
+         <width-range id="12"/>
+         <height-range id="13">
+            <end class="com.tilia.core.formulas.ScalarValue" id="14">100&quot;</end>
+         </height-range>
+         <caliper-range id="15"/>
+         <weight-range id="16"/>
+         <stock-types id="17"/>
+         <specific-stocks id="18"/>
+      </capabilities>
+      <script id="19" refid="28b22a43-64fb-439f-a580-8deab49f2f52" type="com.tilia.core.scripting.ScriptAsset">
+         <frozen-asset class="com.tilia.core.scripting.ScriptAsset" id="20" unique-id="a57c33ad-b689-4e04-ab4b-d68777d21169" created-on="2023-09-05T15:09:35.131Z" version="ca48b268-eeb6-43cc-ac88-2d68e5ab2b73" edit="true" move="true" delete="true" hidden="false" context="None">
+            <properties id="21">
+               <map id="22"/>
+            </properties>
+            <code id="23"></code>
+         </frozen-asset>
+      </script>
+      <media-rules class="com.tilia.iot.model.process.printing.PressMediaRules" id="24">
+         <default class="com.tilia.iot.model.process.printing.PressMediaRules$PressMediaRule" id="25">
+            <marks id="26">
+               <device-mark id="27" side="Front">
+                  <mark id="28" refid="8fa80163-ba0e-4793-be30-1f6c2c35c1b5" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="29" side="Front">
+                  <mark id="30" refid="addd8e39-b2b1-4763-9434-e1f6a553fda2" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="31" side="Front">
+                  <mark id="32" refid="53f83232-2b92-4dbb-8c57-49d0cc610fca" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="33" side="Front">
+                  <mark id="34" refid="692b849d-73df-4b85-be6c-2b5b7e17eb19" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="35" side="Front">
+                  <mark id="36" refid="2d9f1915-d3e2-46e7-86d9-a1f24e4453b9" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="37" side="Front">
+                  <mark id="38" refid="76b828e8-d3a5-45ee-92bd-f7b710c0e8ef" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="39" side="Both">
+                  <mark id="40" refid="74ead7ec-a764-4611-8c57-17776cdbabd1" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="41" side="Back">
+                  <mark id="42" refid="09ebdf9d-8ae5-4f6d-a5e4-a4dea34f051a" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+               <device-mark id="43" side="Front">
+                  <mark id="44" refid="76fbb566-2f5b-43c4-90b7-f87d3f674daf" type="com.tilia.core.marks.MarkAsset"/>
+               </device-mark>
+            </marks>
+            <speed-reduction id="45">0%</speed-reduction>
+            <content id="46" type="Inside" linked="false">
+               <left id="47">0.1&quot;</left>
+               <top id="48">0.1625&quot;</top>
+               <right id="49">0.1&quot;</right>
+               <bottom id="50">0.1625&quot;</bottom>
+            </content>
+            <image id="51" type="Inside" linked="true">
+               <left id="52">0&quot;</left>
+               <top id="53">0&quot;</top>
+               <right id="54">0&quot;</right>
+               <bottom id="55">0&quot;</bottom>
+            </image>
+            <regions id="56"/>
+            <ink-adjustment id="57">0%</ink-adjustment>
+         </default>
+         <map id="58"/>
+      </media-rules>
+      <placement class="com.tilia.iot.model.process.printing.PressPlacement" id="59">
+         <rule id="60" unique-id="22fda1a9-2eaf-419a-a8f7-498de635d4ae" created-on="2023-09-05T15:09:35.131Z" version="9b95a6d6-6c2e-4da0-804d-32b9af510d01" edit="true" move="true" delete="true" hidden="false">
+            <properties id="61">
+               <map id="62"/>
+            </properties>
+            <x id="63" type="XValue" xpoint="Center" ypoint="Bottom" formula="content.center+0&quot;"/>
+            <y id="64" type="YValue" xpoint="Left" ypoint="Center" formula="content.center+0&quot;"/>
+            <resize-sheet id="65">false</resize-sheet>
+         </rule>
+      </placement>
+      <operation class="com.tilia.iot.model.process.printing.PressOperationModes" id="66">
+         <default class="com.tilia.iot.model.process.printing.PressOperationModes$PressOperationMode" id="67">
+            <speed id="68" type="Fixed" fixed-speed="1000.0">
+               <speed-units id="69" units="Feet" time="Hours"/>
+            </speed>
+            <ink-cost id="70" type="Coverage" units="SquareMillimeters" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" spots="0.0" coatings="0.0" foils="0.0">
+               <coverage id="71">25%</coverage>
+            </ink-cost>
+         </default>
+         <map id="72"/>
+      </operation>
+      <front-units id="73" units="100" coatings="0" foils="0"/>
+      <back-units id="74" units="1" coatings="0" foils="0"/>
+      <gripper id="75">0&quot;</gripper>
+   </thing>
+</asset-wrapper>
