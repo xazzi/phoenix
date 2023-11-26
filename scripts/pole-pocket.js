@@ -101,7 +101,6 @@ function run(context){
         }
         
         // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
-        //if(scripts.parameters == "T" || scripts.parameters == "TB"){
         if(pocket.side.top){
             // Draw the shape
             if(product.rotation == 90){
@@ -122,7 +121,6 @@ function run(context){
         }
 
         // If it's only a bottom pocket, then draw the shape.
-        //if(scripts.parameters == "B"){
         if(pocket.side.bottom && !pocket.side.top){
             // Draw the shape
             if(product.rotation == 90){
