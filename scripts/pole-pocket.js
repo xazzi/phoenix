@@ -99,7 +99,48 @@ function run(context){
                 right: scripts.pockets.split(',')[3].split(':')[1] == "true"
             }
         }
+
+        // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
+        if(pocket.side.top){
+            // Draw the shape
+            if(product.rotation == 90){
+                barRect = new Rect(
+                    product.position.x-product.globalRect.width+(pocket.size.top*72)+(1*72),
+                    product.position.y+((product.globalRect.height-(specs.width*72))/2),
+                    (specs.height*72),
+                    (specs.width*72)
+                );
+            }else{
+                barRect = new Rect(
+                    product.position.x+((product.globalRect.width-(specs.width*72))/2),
+                    product.position.y+(product.globalRect.height-(specs.height*72))-(pocket.size.top*72)-(1*72),
+                    (specs.width*72),
+                    (specs.height*72)
+                );
+            }
+        }
+
+        // If it's only a bottom pocket, then draw the shape.
+        if(pocket.side.bottom && !pocket.side.top){
+            // Draw the shape
+            if(product.rotation == 90){
+                barRect = new Rect(
+                    product.position.x-(specs.height*72)-(pocket.size.bottom*72)-(1*72),
+                    product.position.y+((product.globalRect.height-(specs.width*72))/2),
+                    (specs.height*72),
+                    (specs.width*72)
+                );
+            }else{
+                barRect = new Rect(
+                    product.position.x+((product.globalRect.width-(specs.width*72))/2),
+                    product.position.y+(pocket.size.bottom*72)+(1*72),
+                    (specs.width*72),
+                    (specs.height*72)
+                );
+            }
+        }
         
+        /*
         // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
         if(pocket.side.top){
             // Draw the shape
@@ -108,7 +149,7 @@ function run(context){
                     product.position.x-product.globalRect.width+(pocket.size.top*72)+(1*72),
                     product.position.y+((product.globalRect.height-(specs.width*specs.scale.width*72))/2),
                     (specs.height*specs.scale.height*72),
-                    ((specs.width*specs.scale.width*72))
+                    (specs.width*specs.scale.width*72)
                 );
             }else{
                 barRect = new Rect(
@@ -128,7 +169,7 @@ function run(context){
                     product.position.x-(specs.height*72)-(pocket.size.bottom*72)-(1*72),
                     product.position.y+((product.globalRect.height-(specs.width*specs.scale.width*72))/2),
                     (specs.height*specs.scale.height*72),
-                    ((specs.width*specs.scale.width*72))
+                    (specs.width*specs.scale.width*72)
                 );
             }else{
                 barRect = new Rect(
@@ -139,6 +180,7 @@ function run(context){
                 );
             }
         }
+        */
 
         // Draw the dashed line based on the above settings.
         painter.draw(barRect);

@@ -47,6 +47,11 @@ function run(context){
 				product.name,
 				"Due Date"
 			),
+            facility: context.jobs.productProperty(
+				context.job.id,
+				product.name,
+				"Facility"
+			)
 		}
                 
         var date = new Date(parameters.dueDate);
@@ -55,6 +60,12 @@ function run(context){
         if(id == null || id < day){
             id = day
         }
+
+        //reassigned tuesday color to orange for SLC
+        if(id == 2 && parameters.facility == "Salt Lake City"){
+            id = 7
+        }
+
     }
 
     var day, color, build
@@ -94,6 +105,11 @@ function run(context){
             day = "Saturday";
             color = "Dark Gray"
             build = [0,0,0,70]
+        break;
+        case 7: //SLC custom color
+            day = "SLC Tuesday";
+            color = "Orange"
+            build = [0,65,85,0]
         break;
         default:
             day = "Unknown";
