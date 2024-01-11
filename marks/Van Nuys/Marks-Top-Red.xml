@@ -1,0 +1,54 @@
+<asset-wrapper id="0">
+   <meta-data id="1" os="Windows Server 2019 10.0" date="Thu Jan 11 12:46:11 PST 2024">
+      <version id="2" major="23" minor="7" patch="0" type="Release" secondary="1" changeset="373a72e526243577d21612826f1ef108ae2a01f8" date="2023-06-27T21:52:50.877156" revision="0"/>
+   </meta-data>
+   <mark class="com.tilia.core.marks.EyeMarkAsset" id="3" unique-id="4e8e8de4-5de0-4228-8d01-df6a4a916a12" name="Marks-Top-Red" created-by="Phoenix" created-on="2024-01-05T13:22:02.118-08:00" modified-by="Phoenix" modified-on="2024-01-05T13:22:21.009-08:00" version="a6a9d70c-dac8-4a38-9fdc-6e6817daa849" edit="true" move="true" delete="true" hidden="false" rules-are-global="false" built-in-path="false" markPage="1" anchor="sheet" overprint="false" overprint-mode="None" underprint="None" dynamic-custom-mark="false" dynamic-keyword-mapping="false" ignore-technical-inks="true" ignore-varnish-inks="true" pdf-box="TrimBox" clip-option="None" clip-left="0pt" clip-right="0pt" clip-top="0pt" clip-bottom="0pt" x-scale="1.0" y-scale="1.0" layer-name="Marks" double-sided="None" thickness="0pt" width="0.197&quot;" height="0.197&quot;" x-offset="0.25&quot;" y-offset="0mm" position="Top">
+      <properties id="4">
+         <map id="5"/>
+      </properties>
+      <files id="6"/>
+      <rules id="7">
+         <rule id="8" unique-id="2951b7c6-af55-40eb-a299-363b3a67186b" rotation="0.0" rotation-type="origin">
+            <x id="9" type="XValue" xpoint="Left" ypoint="Bottom" formula="sheet.x"/>
+            <y id="10" type="YValue" xpoint="Left" ypoint="Bottom" formula="sheet.y"/>
+            <xscale id="11">1.0</xscale>
+            <yscale id="12">1.0</yscale>
+         </rule>
+      </rules>
+      <underprint-color id="13" type="Composite">
+         <components class="java.util.ArrayList" id="14">
+            <component id="15" type="Ink" placeholder-index="0">
+               <ink id="16" refid="42f650aa-0379-43d1-acc6-5b03cfcf1141" type="com.tilia.core.color.TInk"/>
+               <tint id="17">1.0</tint>
+            </component>
+         </components>
+      </underprint-color>
+      <underprint-margins id="18" type="Outside" linked="true">
+         <left id="19">0.1mm</left>
+         <top id="20">0.1mm</top>
+         <right id="21">0.1mm</right>
+         <bottom id="22">0.1mm</bottom>
+      </underprint-margins>
+      <ink-mappings class="java.util.LinkedList" id="23"/>
+      <keyword-mappings class="java.util.LinkedList" id="24"/>
+      <place-below id="25">false</place-below>
+      <stroke-color id="26" type="Composite">
+         <components class="java.util.ArrayList" id="27">
+            <component id="28" type="Ink" placeholder-index="0">
+               <ink id="29" refid="db2eddd0-9f4c-4047-b7fc-d96ad1f41efd" type="com.tilia.core.color.TInk"/>
+               <tint id="30">1.0</tint>
+            </component>
+         </components>
+      </stroke-color>
+      <fill-color id="31" type="Composite">
+         <components class="java.util.ArrayList" id="32">
+            <component id="33" type="Ink" placeholder-index="0">
+               <ink id="34" refid="8b04794a-a8c1-4155-98c9-24c30d8ef2c8" type="com.tilia.core.color.TInk"/>
+               <tint id="35">1.0</tint>
+            </component>
+         </components>
+      </fill-color>
+      <columns id="36" placement="First" start="1" occurrence="2"/>
+      <rows id="37" placement="All" start="1" occurrence="2"/>
+   </mark>
+</asset-wrapper>

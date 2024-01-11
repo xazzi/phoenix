@@ -1,0 +1,53 @@
+<asset-wrapper id="0">
+   <meta-data id="1" os="Windows Server 2019 10.0" date="Thu Jan 11 12:45:58 PST 2024">
+      <version id="2" major="23" minor="7" patch="0" type="Release" secondary="1" changeset="373a72e526243577d21612826f1ef108ae2a01f8" date="2023-06-27T21:52:50.877156" revision="0"/>
+   </meta-data>
+   <mark class="com.tilia.core.marks.TextMarkAsset" id="3" unique-id="5fcc972c-fea3-45b1-994d-08d2210c9136" name="Gang-Label" created-by="Phoenix" created-on="2024-01-05T13:37:31.281-08:00" modified-by="Phoenix" modified-on="2024-01-05T13:42:07.667-08:00" version="6e5f4657-486c-4ecb-8b2d-338567c8b481" edit="true" move="true" delete="true" hidden="false" rules-are-global="false" built-in-path="false" markPage="1" anchor="sheet" overprint="false" overprint-mode="None" underprint="None" dynamic-custom-mark="false" dynamic-keyword-mapping="false" ignore-technical-inks="true" ignore-varnish-inks="true" pdf-box="TrimBox" clip-option="None" clip-left="0pt" clip-right="0pt" clip-top="0pt" clip-bottom="0pt" x-scale="1.0" y-scale="1.0" layer-name="Text" double-sided="None">
+      <properties id="4">
+         <map id="5"/>
+      </properties>
+      <files id="6"/>
+      <rules id="7">
+         <rule id="8" unique-id="b947e5fc-d351-45d6-92f4-21208243ee3d" rotation="270.0" rotation-type="in-place">
+            <x id="9" type="XValue" xpoint="Left" ypoint="Bottom" formula="sheet.x+0.0625&quot;"/>
+            <y id="10" type="YValue" xpoint="Left" ypoint="Bottom" formula="sheet.y+1&quot;"/>
+            <xscale id="11">1.0</xscale>
+            <yscale id="12">1.0</yscale>
+         </rule>
+      </rules>
+      <underprint-color id="13" type="Composite">
+         <components class="java.util.ArrayList" id="14">
+            <component id="15" type="Ink" placeholder-index="0">
+               <ink id="16" refid="b0842956-d58d-4ef0-a521-1d78dfec9a80" type="com.tilia.core.color.TInk"/>
+               <tint id="17">1.0</tint>
+            </component>
+         </components>
+      </underprint-color>
+      <underprint-margins id="18" type="Outside" linked="false">
+         <left id="19">0pt</left>
+         <top id="20">0pt</top>
+         <right id="21">0pt</right>
+         <bottom id="22">0pt</bottom>
+      </underprint-margins>
+      <ink-mappings class="java.util.LinkedList" id="23"/>
+      <keyword-mappings class="java.util.LinkedList" id="24"/>
+      <place-below id="25">false</place-below>
+      <text id="26">&lt;html&gt;&lt;body style=&quot; &quot;&gt;&lt;p style=&quot; font-family:&apos;Arimo&apos;; font-size:12.0pt; font-weight:-2147483648;  color:#000000;&quot;&gt;&amp;lt;job.id&amp;gt; Layout &amp;lt;layout.index&amp;gt; ------- &amp;lt;stock.name&amp;gt; ------ &amp;lt;layout.run-length&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</text>
+      <style>
+         <integer id="27">-2147483648</integer>
+         <string id="28">Regular</string>
+      </style>
+      <line-heights class="java.util.LinkedList" id="29"/>
+      <color>
+         <string id="30">000000</string>
+         <markColor id="31" type="Composite">
+            <components class="java.util.ArrayList" id="32">
+               <component id="33" type="Ink" placeholder-index="0">
+                  <ink id="34" refid="de7e01c4-794e-45e7-99a7-b3dceaf0ca3c" type="com.tilia.core.color.TInk"/>
+                  <tint id="35">1.0</tint>
+               </component>
+            </components>
+         </markColor>
+      </color>
+   </mark>
+</asset-wrapper>
