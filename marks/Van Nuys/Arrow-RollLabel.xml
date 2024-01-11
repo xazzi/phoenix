@@ -1,0 +1,65 @@
+<asset-wrapper id="0">
+   <meta-data id="1" os="Windows Server 2019 10.0" date="Thu Jan 11 12:45:54 PST 2024">
+      <version id="2" major="23" minor="7" patch="0" type="Release" secondary="1" changeset="373a72e526243577d21612826f1ef108ae2a01f8" date="2023-06-27T21:52:50.877156" revision="0"/>
+   </meta-data>
+   <mark class="com.tilia.core.marks.CustomMarkAsset" id="3" unique-id="0e0560fc-2311-4a43-9a8b-b19ce4e8fa43" name="Arrow-RollLabel" created-by="Phoenix" created-on="2024-01-05T12:47:54.557-08:00" version="a6d55d95-71a6-4240-9993-5dd37b3eae09" edit="true" move="true" delete="true" hidden="false" rules-are-global="false" markPath="C:/Scripts/prod/phoenix/marks/arrow-roll-label.pdf" built-in-path="false" markPage="1" anchor="sheet" overprint="false" overprint-mode="None" underprint="None" dynamic-custom-mark="false" dynamic-keyword-mapping="false" ignore-technical-inks="true" ignore-varnish-inks="true" pdf-box="TrimBox" clip-option="None" clip-left="0pt" clip-right="0pt" clip-top="0pt" clip-bottom="0pt" x-scale="1.0" y-scale="1.0" layer-name="Custom" double-sided="None">
+      <properties id="4">
+         <map id="5"/>
+      </properties>
+      <files id="6"/>
+      <rules id="7">
+         <rule id="8" unique-id="3665825c-89a1-4e92-8f40-c65287fdaab7" rotation="0.0" rotation-type="in-place">
+            <x id="9" type="XValue" xpoint="Left" ypoint="Bottom" formula="sheet.x+0&quot;"/>
+            <y id="10" type="YValue" xpoint="Left" ypoint="Top" formula="sheet.top+0&quot;"/>
+            <xscale id="11">1.0</xscale>
+            <yscale id="12">1.0</yscale>
+         </rule>
+         <rule id="13" unique-id="5d13250d-a30f-4451-99b6-38498e098531" rotation="0.0" rotation-type="in-place">
+            <x id="14" type="XValue" xpoint="Right" ypoint="Bottom" formula="sheet.right+0&quot;"/>
+            <y id="15" type="YValue" xpoint="Left" ypoint="Top" formula="sheet.top+0&quot;"/>
+            <xscale id="16">1.0</xscale>
+            <yscale id="17">1.0</yscale>
+         </rule>
+         <rule id="18" unique-id="f6df531e-59b7-4c3b-a2b6-a48912213dec" rotation="180.0" rotation-type="in-place">
+            <x id="19" type="XValue" xpoint="Left" ypoint="Bottom" formula="sheet.x+0&quot;"/>
+            <y id="20" type="YValue" xpoint="Left" ypoint="Bottom" formula="sheet.y+0&quot;"/>
+            <xscale id="21">1.0</xscale>
+            <yscale id="22">1.0</yscale>
+         </rule>
+         <rule id="23" unique-id="49151262-1867-466f-9abd-34eafd223fb3" rotation="180.0" rotation-type="in-place">
+            <x id="24" type="XValue" xpoint="Right" ypoint="Bottom" formula="sheet.right+0&quot;"/>
+            <y id="25" type="YValue" xpoint="Left" ypoint="Bottom" formula="sheet.y+0&quot;"/>
+            <xscale id="26">1.0</xscale>
+            <yscale id="27">1.0</yscale>
+         </rule>
+      </rules>
+      <underprint-color id="28" type="Composite">
+         <components class="java.util.ArrayList" id="29">
+            <component id="30" type="Ink" placeholder-index="0">
+               <ink id="31" refid="b0842956-d58d-4ef0-a521-1d78dfec9a80" type="com.tilia.core.color.TInk"/>
+               <tint id="32">1.0</tint>
+            </component>
+         </components>
+      </underprint-color>
+      <underprint-margins id="33" type="Outside" linked="false">
+         <left id="34">0pt</left>
+         <top id="35">0pt</top>
+         <right id="36">0pt</right>
+         <bottom id="37">0pt</bottom>
+      </underprint-margins>
+      <ink-mappings class="java.util.LinkedList" id="38">
+         <mapping id="39" ink-name="Black">
+            <replacement id="40" type="Composite">
+               <components class="java.util.ArrayList" id="41">
+                  <component id="42" type="Ink" placeholder-index="0">
+                     <ink id="43" refid="d5a18f46-ee86-4a93-a7d0-ef0435fdfcd3" type="com.tilia.core.color.TInk"/>
+                     <tint id="44">1.0</tint>
+                  </component>
+               </components>
+            </replacement>
+         </mapping>
+      </ink-mappings>
+      <keyword-mappings class="java.util.LinkedList" id="45"/>
+      <place-below id="46">false</place-below>
+   </mark>
+</asset-wrapper>
