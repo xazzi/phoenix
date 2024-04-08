@@ -62,9 +62,9 @@ function run(context){
         }
 
         //reassigned tuesday color to orange for SLC
-        if(id == 2 && parameters.facility == "Salt Lake City"){
+        /*if(id == 2 && parameters.facility == "Salt Lake City"){
             id = 7
-        }
+        }*/
 
     }
 
@@ -106,7 +106,7 @@ function run(context){
             color = "Dark Gray"
             build = [0,0,0,70]
         break;
-        case 7: //SLC custom color
+        case 7: //SLC custom color, override currently commented out
             day = "SLC Tuesday";
             color = "Orange"
             build = [0,65,85,0]
