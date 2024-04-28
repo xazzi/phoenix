@@ -62,9 +62,9 @@ function run(context){
         }
 
         //reassigned tuesday color to orange for SLC
-        if(id == 2 && parameters.facility == "Salt Lake City"){
-            id = 7
-        }
+        //if(id == 2 && parameters.facility == "Salt Lake City"){
+        //    id = 7
+        //}
 
     }
 
