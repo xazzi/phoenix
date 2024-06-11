@@ -42,6 +42,8 @@ function run(context){
             continue;
         }
 
+        context.log("Test")
+
         // Pull these variables from other places in the CSV
 		var specs = {
 			width: context.jobs.productProperty(
@@ -68,8 +70,8 @@ function run(context){
             }
 		}
 
-        specs.width = specs.width*specs.scale.width;
-        specs.height = specs.height*specs.scale.height;
+        //specs.width = specs.width*specs.scale.width;
+        //specs.height = specs.height*specs.scale.height;
 
 		// Create new Painter to draw with and clear the pen so there will be no stroke.
       	var painter = new Painter(context.data);
@@ -88,6 +90,7 @@ function run(context){
 
         var barRect
 
+        /*
         var pocket = {
             size:{
                 top: scripts.pockets.split(',')[0].split(':')[2] * specs.scale.height,
@@ -102,8 +105,25 @@ function run(context){
                 right: scripts.pockets.split(',')[3].split(':')[1] == "true"
             }
         }
+        */
 
-        var offset = 1*72*specs.scale.height;
+        var pocket = {
+            size:{
+                top: scripts.pockets.split(',')[0].split(':')[2],
+                bottom: scripts.pockets.split(',')[1].split(':')[2],
+                left: scripts.pockets.split(',')[2].split(':')[2],
+                right: scripts.pockets.split(',')[3].split(':')[2]
+            },
+            side:{
+                top: scripts.pockets.split(',')[0].split(':')[1] == "true",
+                bottom: scripts.pockets.split(',')[1].split(':')[1] == "true",
+                left: scripts.pockets.split(',')[2].split(':')[1] == "true",
+                right: scripts.pockets.split(',')[3].split(':')[1] == "true"
+            }
+        }
+
+        //var offset = 1*72*specs.scale.height;
+        var offset = 1*72;
 
         // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
         if(pocket.side.top){
