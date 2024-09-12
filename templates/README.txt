@@ -1,1 +1,1 @@
-Files are exported from Illustrator at 2.83 points per 1 unit.
+Files are exported from Illustrator at 2.83 (2.834) points per 1 unit.
