@@ -73,10 +73,12 @@ function run(context){
             pen.dashPattern = [3,6];
             painter.pen = pen;
 
+        /*
         // For now, skip the dashed line if it's not 100% scale. Adjust this later to account for the scale in the hem.
         if(specs.scale.width != 1 || specs.scale.height != 1){
             continue;
         }
+        */
 
         var barRect, offsetX, offsetY
 

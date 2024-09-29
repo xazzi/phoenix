@@ -73,6 +73,14 @@ function run(context){
         //specs.width = specs.width*specs.scale.width;
         //specs.height = specs.height*specs.scale.height;
 
+        if(specs.scale.width < 1){
+            specs.width = specs.width*specs.scale.width;
+        }
+
+        if(specs.scale.height < 1){
+            specs.height = specs.height*specs.scale.height;
+        }
+
 		// Create new Painter to draw with and clear the pen so there will be no stroke.
       	var painter = new Painter(context.data);
 			painter.clearPen();
@@ -90,7 +98,6 @@ function run(context){
 
         var barRect
 
-        /*
         var pocket = {
             size:{
                 top: scripts.pockets.split(',')[0].split(':')[2] * specs.scale.height,
@@ -105,8 +112,8 @@ function run(context){
                 right: scripts.pockets.split(',')[3].split(':')[1] == "true"
             }
         }
-        */
 
+        /*
         var pocket = {
             size:{
                 top: scripts.pockets.split(',')[0].split(':')[2],
@@ -121,9 +128,10 @@ function run(context){
                 right: scripts.pockets.split(',')[3].split(':')[1] == "true"
             }
         }
+            */
 
-        //var offset = 1*72*specs.scale.height;
-        var offset = 1*72;
+        var offset = 1*72*specs.scale.height;
+        //var offset = 1*72;
 
         // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
         if(pocket.side.top){
