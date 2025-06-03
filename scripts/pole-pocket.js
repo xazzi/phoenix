@@ -70,9 +70,6 @@ function run(context){
             }
 		}
 
-        //specs.width = specs.width*specs.scale.width;
-        //specs.height = specs.height*specs.scale.height;
-
         if(specs.scale.width < 1){
             specs.width = specs.width*specs.scale.width;
         }
@@ -100,22 +97,6 @@ function run(context){
 
         var pocket = {
             size:{
-                top: scripts.pockets.split(',')[0].split(':')[2] * specs.scale.height,
-                bottom: scripts.pockets.split(',')[1].split(':')[2] * specs.scale.height,
-                left: scripts.pockets.split(',')[2].split(':')[2] * specs.scale.width,
-                right: scripts.pockets.split(',')[3].split(':')[2] * specs.scale.width
-            },
-            side:{
-                top: scripts.pockets.split(',')[0].split(':')[1] == "true",
-                bottom: scripts.pockets.split(',')[1].split(':')[1] == "true",
-                left: scripts.pockets.split(',')[2].split(':')[1] == "true",
-                right: scripts.pockets.split(',')[3].split(':')[1] == "true"
-            }
-        }
-
-        /*
-        var pocket = {
-            size:{
                 top: scripts.pockets.split(',')[0].split(':')[2],
                 bottom: scripts.pockets.split(',')[1].split(':')[2],
                 left: scripts.pockets.split(',')[2].split(':')[2],
@@ -128,12 +109,13 @@ function run(context){
                 right: scripts.pockets.split(',')[3].split(':')[1] == "true"
             }
         }
-            */
 
-        var offset = 1*72*specs.scale.height;
-        //var offset = 1*72;
+        var offset = .5*72*specs.scale.height;
+        if(specs.scale.width == 1){
+            offset = 1*72
+        }
 
-        // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
+        // If it has a top pocket (including top and bottom).
         if(pocket.side.top){
             // Draw the shape
             if(product.rotation == 90){
@@ -172,48 +154,6 @@ function run(context){
                 );
             }
         }
-        
-        /*
-        // If it has a top pocket (including top and bottom), then draw the shape and return out before drawing bottom.
-        if(pocket.side.top){
-            // Draw the shape
-            if(product.rotation == 90){
-                barRect = new Rect(
-                    product.position.x-product.globalRect.width+(pocket.size.top*72)+(1*72),
-                    product.position.y+((product.globalRect.height-(specs.width*specs.scale.width*72))/2),
-                    (specs.height*specs.scale.height*72),
-                    (specs.width*specs.scale.width*72)
-                );
-            }else{
-                barRect = new Rect(
-                    product.position.x+((product.globalRect.width-(specs.width*specs.scale.width*72))/2),
-                    product.position.y+(product.globalRect.height-(specs.height*specs.scale.height*72))-(pocket.size.top*72)-(1*72),
-                    (specs.width*specs.scale.width*72),
-                    (specs.height*specs.scale.height*72)
-                );
-            }
-        }
-
-        // If it's only a bottom pocket, then draw the shape.
-        if(pocket.side.bottom && !pocket.side.top){
-            // Draw the shape
-            if(product.rotation == 90){
-                barRect = new Rect(
-                    product.position.x-(specs.height*72)-(pocket.size.bottom*72)-(1*72),
-                    product.position.y+((product.globalRect.height-(specs.width*specs.scale.width*72))/2),
-                    (specs.height*specs.scale.height*72),
-                    (specs.width*specs.scale.width*72)
-                );
-            }else{
-                barRect = new Rect(
-                    product.position.x+((product.globalRect.width-(specs.width*specs.scale.width*72))/2),
-                    product.position.y+(pocket.size.bottom*72)+(1*72),
-                    (specs.width*specs.scale.width*72),
-                    (specs.height*specs.scale.height*72)
-                );
-            }
-        }
-        */
 
         // Draw the dashed line based on the above settings.
         painter.draw(barRect);
