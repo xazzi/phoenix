@@ -110,13 +110,10 @@ function run(context){
             }
         }
 
-
         var offset = .5*72*specs.scale.height;
         if(specs.scale.width == 1){
             offset = 1*72
         }
-
-        context.log(product.globalRect.width)
 
         // If it has a top pocket (including top and bottom).
         if(pocket.side.top){
